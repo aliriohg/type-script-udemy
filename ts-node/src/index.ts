@@ -35,10 +35,22 @@ const deapool = {
 
 console.log(genericFuntionArrow<HeroInterface>(deapool).realName);
 */
-
+/*
 import { getPokemon } from "./generics/get-pokemon";
 
 getPokemon(1)
 .then((resp) => console.log(resp))
 .catch(error => console.log(error))
 .finally(()=>console.log('Fin de getPokemon'));
+]
+*/
+
+import { Pokemon } from "./decorators/pokemon-class";
+
+const charmander = new Pokemon('Charmander');
+//(Pokemon.prototype as any).custonName = 'Pikachu';
+
+console.log(charmander);
+charmander.publicApi='Test';
+console.log(charmander);
+charmander.savePokemonToDB(3);
